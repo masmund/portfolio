@@ -1,131 +1,86 @@
-/*font-family: "Trebuchet MS", Tahoma, sans-serif;*/
-
-/*body{
-    margin: 0;
-    background-color: black;
-    color: #00ff00;
-}*/
-
-h1{
-    font-family: "Trebuchet MS", Tahoma, sans-serif;
-    text-transform: uppercase;
-    color: yellow;
-}
-
-header{
-    margin: 0;
-    padding: 0;
-}
-
-footer {
-  background-color: #3f0071;
-  color: aqua;
-  text-align: center;
-  padding: 1rem;
-  position: relative;
-}
-
-
-footer>p{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#menu{
-    font-size: 1.2em;
-    display: flex;
-    gap: 35px;
-    background-color: #3f0071;
+body{
+    background-color:#d2f0ff;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("images/fond.jpg");
+    background-repeat: repeat;
     color: white;
-    height: 100px;
-    box-sizing: border-box;
+}   
+
+
+h1 {
+    font-variant: small-caps;
+    text-align: center;
+    border: 3px inset red;
+    height: 2em;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-a, a:visited{
-    color:aqua;
-    text-decoration:underline;
+.container{
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-a{
-    margin: 10px;
-    color: aqua;
-}
-
-.animated-title {
-    width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-    
-    
-  }
-  
-  .animated-title h1 {
-    display: inline-block;
-    padding-left: 100%;
-    animation: scroll-left 10s linear infinite;
-  }
-  
-  @keyframes scroll-left {
-    from {
-      transform: translateX(0%);
-    }
-    to {
-      transform: translateX(-100%);
-    }
-  }
-  
-  main{
-    flex: 1;
+.titre-superpose {
+    position: relative;
+    text-align: center;
+    border: 3px inset red;
+    height: 2em;
+    font-variant: small-caps;
+    display: flex;
     justify-content: center;
     align-items: center;
-  }
+    overflow: hidden; /* empêche le gif de déborder */
+}
 
-  body {
-    font-family: "Comic Sans MS", "Comic Sans";
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    background: black;
-    color: #00ff00;
-    overflow: hidden;
-    position: relative;
-    height: 100%;
+.gif-superpose {
+    position: absolute;
+    left: 85%;
+    transform: translateX(-50%); /* ajuste pour être vraiment au centre */
+    z-index: 2; /* met le gif devant le texte */
+    height: 2em;
+}
+
+.contenu-principal {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+#menu {
+    width: 150px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
-  }
-  
-  .stars {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-  }
-  
-  .stars::after {
-    content: "";
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    background: transparent;
-    box-shadow:
-      20px 30px white,
-      50px 80px white,
-      120px 150px white,
-      200px 40px white,
-      300px 90px white,
-      400px 200px white,
-      500px 120px white,
-      600px 300px white,
-      700px 50px white,
-      800px 220px white,
-      900px 100px white,
-      1000px 150px white,
-      1100px 70px white,
-      1150px 250px white;
-  }
+    gap: 10px;
+    border-radius: 5%;
+    background-image: url("images/water.png");
+    background-repeat: repeat;
+}
+
+#menu a {
+    display: block; /* s’assure qu’ils prennent toute la largeur */
+    padding: 8px;
+    text-decoration: none;
+    color: white;
+}
+
+
+.contenu-sections {
+    flex: 1;
+    border: 3px inset red;
+    padding: 15px;
+}
+
+footer{
+    text-align: center;
+    border: 3px inset red;
+    margin-top: 25px;
+}
+
+nav>p{
+    text-align: center;
+}
