@@ -17,16 +17,17 @@
             </header>
 
             <div id="topBar">
-                <marquee>
+                <div class="marquee">
                     <img src="images/consbar.gif">
-                    <img src="images/consbar.gif">
-                </marquee>
+                </div>
             </div>
 
             <main class="contenu-principal">
                 <div id="menu">
                     <nav>
-                        <p> Navigation </p>
+                        <div class="tab">
+                            Navigation
+                        </div>
                         <img src="images/linee.gif" width="150px">
                         <ul>
                             <li><a href="#accueil">Accueil</a></li>
@@ -39,32 +40,53 @@
 
                 <div class="contenu-sections">
                     <section id="apropos">
-                        <h2>A propos</h2>
-                        <img src="images/photo.jpg" height="150px" width="150px">
-                        <p>
-                            Bonjour ! Je suis Ji-O KIM, étudiant en 1ere année de BUT informatique à l'IUT de Lannion.
-                        </p>
+                        <h2>À propos</h2>
+                        <div class="contenu-apropos">
+                            <img src="images/photo.jpg" height="150px" width="150px" alt="Photo de profil">
+                            <p>
+                                Bonjour ! Je suis Ji-O KIM, étudiant en 1ère année de BUT informatique à l'IUT de Lannion.
+                            </p>
+                        </div>
                     </section>
 
-                    <section>
+                    <section id="projets">
                         <h2>Mes projets</h2>
+                        <div class="grille-projets">
+                            <div class="projet">Projet 1 : ...</div>
+                            <div class="projet">Projet 2 : ...</div>
+                            <div class="projet">Projet 3 : ...</div>
+                            <!-- Tu peux en ajouter autant que tu veux -->
+                            <!-- <div class="projet">Projet 4 : ...</div> -->
+                        </div>
                     </section>
+                    
+
+                    <section id="competences">
+                        <h2>Mes compétences</h2>
+                        <div class="grille-competences">
+                            <div class="competence">Compétence 1 : ...</div>
+                            <div class="competence">Compétence 2 : ...</div>
+                            <div class="competence">Compétence 3 : ...</div>
+                            <!-- Tu peux rajouter plus de compétences ici -->
+                        </div>
+                    </section>
+                    
 
                     <section>
                         <h2>Me contacter</h2>
                         <p>Tel : 06.52.00.67.67</p>
                         <p>E-mail : <a href="mailto:jiokim098@gmail.com">jiokim098@gmail.com</a></p>
                         <p>LinkedIn : <a href="https://www.linkedin.com/in/ji-o-kim-4b9b7a352/" target="_blank">Ji-O KIM</a></p>
-                        <p>CV : <a href="CV_Jio_kim.pdf" target="_blank"> Télécharger ici</a></p>
-                        <p>GitHub: <a href="https://github.com/masmund" target="_blank">Clique ici </a></p>
+                        <p>CV : <a href="CV_Jio_kim.pdf" target="_blank"> Téléchargez ici</a></p>
+                        <p>GitHub: <a href="https://github.com/masmund" target="_blank">Cliquez ici </a></p>
                     </section>
                 </div>
             </main>
 
             <footer>
-                <p> &copy; 2025 Tous droits réservés</p>
+                <p> &copy; 2025 Tous droits réservés </p>
             </footer>
-
+        </div>
     </body>
 
 </html>

@@ -17,8 +17,9 @@ h1 {
     align-items: center;
 }
 
-.container{
-    width: 800px;
+.container {
+    max-width: 800px;
+    width: 90%;
     margin: 0 auto;
     padding: 20px;
 }
@@ -59,6 +60,8 @@ h1 {
     border-radius: 5%;
     background-image: url("images/water.png");
     background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 #menu a {
@@ -68,6 +71,10 @@ h1 {
     color: white;
 }
 
+#menu a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
 
 .contenu-sections {
     flex: 1;
@@ -77,7 +84,7 @@ h1 {
 section{
     border: 3px inset #0cff00;
     margin : 10px;
-    padding: 10;
+    padding: 10px;
 }
 
 footer{
@@ -91,4 +98,90 @@ nav>p{
     text-align: center;
 }
 
+.grille-projets {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
+    gap: 15px; /* espace entre les projets */
+    margin-top: 10px;
+}
 
+.projet {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border: 2px solid #0cff00;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.tab {
+    width: 150px; /* largeur identique à l’image */
+    height: 30px; /* hauteur identique à l’image */
+    background: linear-gradient(180deg, #0997ff, #0053ee 8%, #0012ca 40%, #06f 88%, #06f 93%, #0012ca 95%, #0012ca 96%, #003dd7);
+    font-family: 'JMHCthulhumbusArcade', sans-serif;
+    color: #ffffff;
+    padding: 0;
+    border: none;
+    border-radius: 8px 8px 0px 0px;
+    font-size: 16px;
+    text-shadow: 1px 1px #0f1089;
+    text-align: center;
+    line-height: 30px; /* centrer verticalement */
+    box-sizing: border-box;
+    overflow: hidden; /* cache tout dépassement */
+}
+
+#apropos {
+    margin: 10px;
+    padding: 10px;
+    border: 3px inset #0cff00;
+}
+
+.contenu-apropos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.contenu-apropos img {
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: defilement 10s linear infinite;
+}
+
+.marquee img {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+@keyframes defilement {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+#competences {
+    margin: 10px;
+    padding: 10px;
+    border: 3px inset #0cff00;
+}
+
+.grille-competences {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 compétences par ligne */
+    gap: 15px; /* espace entre les éléments */
+    margin-top: 10px;
+}
+
+.competence {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border: 2px solid #0cff00;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 16px;
+}
