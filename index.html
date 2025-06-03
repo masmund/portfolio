@@ -42,7 +42,7 @@
                     <section id="apropos">
                         <h2>À propos</h2>
                         <div class="contenu-apropos">
-                            <img src="images/photo.jpg" height="150px" width="150px" alt="Photo de profil">
+                            <img src="images/20240803_232403y.jpg" height="150px" width="150px" alt="Photo de profil">
                             <p>
                                 Bonjour ! Je suis Ji-O KIM, étudiant en 1ère année de BUT informatique à l'IUT de Lannion.
                             </p>
@@ -50,16 +50,38 @@
                     </section>
 
                     <section id="projets">
-                        <h2>Mes projets</h2>
-                        <div class="grille-projets">
-                            <div class="projet">Projet 1 : ...</div>
-                            <div class="projet">Projet 2 : ...</div>
-                            <div class="projet">Projet 3 : ...</div>
-                            <!-- Tu peux en ajouter autant que tu veux -->
-                            <!-- <div class="projet">Projet 4 : ...</div> -->
+                    <h2>Mes projets</h2>
+
+                    <div class="grille-projets-toggle">
+                        <input type="checkbox" id="proj1" hidden>
+                        <input type="checkbox" id="proj2" hidden>
+                        <input type="checkbox" id="proj3" hidden>
+
+                        <div class="bloc-projet">
+                        <label for="proj1" class="carte-projet">Projet 1</label>
+                        <div class="contenu-projet">
+                            <label for="proj1" class="fermer-projet"></label>
+                            <p>Détails du projet 1 ici...</p>
                         </div>
+                        </div>
+
+                        <div class="bloc-projet">
+                        <label for="proj2" class="carte-projet">Projet 2</label>
+                        <div class="contenu-projet">
+                            <label for="proj2" class="fermer-projet"></label>
+                            <p>Détails du projet 2 ici...</p>
+                        </div>
+                        </div>
+
+                        <div class="bloc-projet">
+                        <label for="proj3" class="carte-projet">Projet 3</label>
+                        <div class="contenu-projet">
+                            <label for="proj3" class="fermer-projet"></label>
+                            <p>Détails du projet 3 ici...</p>
+                        </div>
+                        </div>
+                    </div>
                     </section>
-                    
 
                     <section id="competences">
                         <h2>Mes compétences</h2>
@@ -74,7 +96,7 @@
 
                     <section>
                         <h2>Me contacter</h2>
-                        <p>Tel : 06.52.00.67.67</p>
+                        <p>Tel : <a href="06.52.00.67.67"> 06.52.00.67.67 </a>  </p>
                         <p>E-mail : <a href="mailto:jiokim098@gmail.com">jiokim098@gmail.com</a></p>
                         <p>LinkedIn : <a href="https://www.linkedin.com/in/ji-o-kim-4b9b7a352/" target="_blank">Ji-O KIM</a></p>
                         <p>CV : <a href="CV_Jio_kim.pdf" target="_blank"> Téléchargez ici</a></p>
