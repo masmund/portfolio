@@ -85,13 +85,13 @@ section{
     border: 3px inset #0cff00;
     margin : 10px;
     padding: 10px;
+    border-radius: 6px;
 }
 
 footer{
     text-align: center;
     border: 3px inset #0cff00;
     margin-top: 25px;
-    border-radius: 5%;
 }
 
 nav>p{
@@ -254,3 +254,43 @@ nav>p{
   box-shadow: 0 0 10px #0cff00;
   transition: background-color 0.2s ease, box-shadow 0.2s ease;
 }
+
+#contacts {
+  border: 3px inset #0cff00;
+  padding: 15px;
+  background-color: rgba(255,255,255,0.05);
+  border-radius: 8px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(255,255,255,0.1);
+  padding: 10px;
+  border: 2px solid #0cff00;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.contact-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.contact-item span {
+  font-size: 18px;
+}
+
+.contact-item a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
