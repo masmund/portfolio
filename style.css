@@ -44,7 +44,7 @@ h1 {
     height: 2em;
 }
 
-.contenu-principal {
+.contenu-principal { 
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -229,15 +229,15 @@ nav>p{
   cursor: pointer;
 }
 
-/*
-/* Masquer tous sauf celui sélectionné */
+
+/* Masquer tous sauf celui sélectionné 
 #proj1:checked ~ .bloc-projet:not(:nth-of-type(1)),
 #proj2:checked ~ .bloc-projet:not(:nth-of-type(2)),
 #proj3:checked ~ .bloc-projet:not(:nth-of-type(3)) {
   display: none;
-}
+} 
 
-/* Agrandir et montrer le contenu */
+Agrandir et montrer le contenu 
 #proj1:checked ~ .bloc-projet:nth-of-type(1),
 #proj2:checked ~ .bloc-projet:nth-of-type(2),
 #proj3:checked ~ .bloc-projet:nth-of-type(3) {
