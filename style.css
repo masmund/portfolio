@@ -52,16 +52,30 @@ h1 {
 }
 
 #menu {
-    width: 150px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    border-radius: 5%;
-    background-image: url("images/water.png");
-    background-repeat: repeat;
-    background-size: cover;
-    background-position: center;
+  width: 150px; /* OK, c'est bon, le parent a une largeur */
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 5%;
+  background-image: url("images/water.png");
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.header-menu {
+    width: 100%; /* Force le conteneur à prendre toute la largeur du menu */
+}
+
+.separateur-menu {
+    width: 100%; /* L’image prend aussi toute la largeur */
+    display: block;
+}
+
+#menu > .tab {
+    width: 100%;
+    align-self: stretch; /* Forcer à remplir */
 }
 
 #menu a {
@@ -114,8 +128,9 @@ nav>p{
 }
 
 .tab {
-    width: 150px; /* largeur identique à l’image */
-    height: 30px; /* hauteur identique à l’image */
+    display: block;
+    width: 100%; /* Prend toute la largeur du parent */
+    height: 30px;
     background: linear-gradient(180deg, #0997ff, #0053ee 8%, #0012ca 40%, #06f 88%, #06f 93%, #0012ca 95%, #0012ca 96%, #003dd7);
     font-family: 'JMHCthulhumbusArcade', sans-serif;
     color: #ffffff;
@@ -125,9 +140,9 @@ nav>p{
     font-size: 16px;
     text-shadow: 1px 1px #0f1089;
     text-align: center;
-    line-height: 30px; /* centrer verticalement */
+    line-height: 30px;
     box-sizing: border-box;
-    overflow: hidden; /* cache tout dépassement */
+    overflow: hidden;
 }
 
 #apropos {
@@ -296,3 +311,116 @@ nav>p{
   font-weight: bold;
 }
 
+.grille-competences-toggle {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  transition: all 0.3s ease;
+}
+
+.bloc-competence {
+  background-color: rgba(255,255,255,0.1);
+  border: 2px solid #0cff00;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.carte-competence {
+  display: block;
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  flex-shrink: 0;
+
+  white-space: nowrap;       /* sur une ligne */
+  overflow: hidden;          /* cache le débordement */
+  text-overflow: ellipsis;   /* met les ... */
+  max-width: 100%;
+}
+
+
+.contenu-competence {
+  display: none;
+  padding: 10px 15px;
+  color: white;
+  font-size: 14px;
+}
+
+.fermer-competence {
+  display: block;
+  margin-top: 10px;
+  font-size: 12px;
+  color: #ff9999;
+  cursor: pointer;
+}
+
+/* Masquer tous sauf celui sélectionné */
+#comp1:checked ~ .bloc-competence:not(:nth-of-type(1)),
+#comp2:checked ~ .bloc-competence:not(:nth-of-type(2)),
+#comp3:checked ~ .bloc-competence:not(:nth-of-type(3)),
+#comp4:checked ~ .bloc-competence:not(:nth-of-type(4)),
+#comp5:checked ~ .bloc-competence:not(:nth-of-type(5)),
+#comp6:checked ~ .bloc-competence:not(:nth-of-type(6)) {
+  display: none;
+}
+
+/* Agrandir et montrer le contenu */
+#comp1:checked ~ .bloc-competence:nth-of-type(1),
+#comp2:checked ~ .bloc-competence:nth-of-type(2),
+#comp3:checked ~ .bloc-competence:nth-of-type(3),
+#comp4:checked ~ .bloc-competence:nth-of-type(4),
+#comp5:checked ~ .bloc-competence:nth-of-type(5),
+#comp6:checked ~ .bloc-competence:nth-of-type(6) {
+  grid-column: 1 / -1;
+}
+
+#comp1:checked ~ .bloc-competence:nth-of-type(1) .contenu-competence,
+#comp2:checked ~ .bloc-competence:nth-of-type(2) .contenu-competence,
+#comp3:checked ~ .bloc-competence:nth-of-type(3) .contenu-competence,
+#comp4:checked ~ .bloc-competence:nth-of-type(4) .contenu-competence,
+#comp5:checked ~ .bloc-competence:nth-of-type(5) .contenu-competence,
+#comp6:checked ~ .bloc-competence:nth-of-type(6) .contenu-competence {
+  display: block;
+}
+
+/* Animation au survol */
+.carte-competence:hover {
+  background-color: rgba(0, 255, 183, 0.299);
+  box-shadow: 0 0 10px #0cff00;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.slider-section {
+    width: 300px; /* largeur de la zone de défilement */
+    height: 150px; /* hauteur des images */
+    overflow: hidden;
+    border: 3px inset #0cff00;
+    margin: 10px auto;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.slider-track {
+    display: flex;
+    width: calc(300px * 8); /* 4 images + 4 copies pour l'infini */
+    animation: scroll 20s linear infinite;
+}
+
+.slider-img {
+    width: 300px;
+    height: 150px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* Animation de défilement */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-1200px); } /* 300px * 4 images = largeur totale à défiler */
+}

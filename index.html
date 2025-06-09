@@ -25,20 +25,33 @@
             <main class="contenu-principal">
                 <div id="menu">
                     <nav>
-                        <div class="tab">
-                            Navigation
+                        <div class="header-menu">
+                            <div class="tab">Navigation</div>
+                            <img src="images/linee.gif" class="separateur-menu">
                         </div>
-                        <img src="images/linee.gif" width="150px">
                         <ul>
-                            <li><a href="#accueil">Accueil</a></li>
-                            <li><a href="#a-propos">À propos</a></li>
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="#apropos">À propos</a></li>
                             <li><a href="#projets">Projets</a></li>
+                            <li><a href="#competences">Compétences</a></li>
                             <li><a href="#contacts">Contacts</a></li>
                         </ul>
                     </nav>
                 </div>
 
                 <div class="contenu-sections">
+                    <div class="slider-section">
+                        <div class="slider-track">
+                            <img src="images/html.png" alt="Image 1" class="slider-img">
+                            <img src="images/css.png" alt="Image 2" class="slider-img">
+                            <img src="images/java.png" alt="Image 3" class="slider-img">
+                            <img src="images/C.png" alt="Image 4" class="slider-img">
+                            <img src="images/sql.png" alt="Image 5" class="slider-img">
+                            <img src="images/python.png" alt="Image 6" class="slider-img">
+                            <!-- Tu peux ajouter autant d'images que tu veux -->
+                        </div>
+                    </div>
+
                     <section id="apropos">
                         <h2>À propos</h2>
                         <div class="contenu-apropos">
@@ -85,11 +98,63 @@
 
                     <section id="competences">
                         <h2>Mes compétences</h2>
-                        <div class="grille-competences">
-                            <div class="competence">Compétence 1 : ...</div>
-                            <div class="competence">Compétence 2 : ...</div>
-                            <div class="competence">Compétence 3 : ...</div>
-                            <!-- Tu peux rajouter plus de compétences ici -->
+
+                        <div class="grille-competences-toggle">
+                            <input type="checkbox" id="comp1" hidden>
+                            <input type="checkbox" id="comp2" hidden>
+                            <input type="checkbox" id="comp3" hidden>
+                            <input type="checkbox" id="comp4" hidden>
+                            <input type="checkbox" id="comp5" hidden>
+                            <input type="checkbox" id="comp6" hidden>
+
+                            <div class="bloc-competence">
+                            <label for="comp1" class="carte-competence">Administrer des systèmes informatiques communicants complexes</label>
+                            <div class="contenu-competence">
+                                <label for="comp1" class="fermer-competence"></label>
+                                <p>Détails de la compétence 1 ici...</p>
+                            </div>
+                            </div>
+
+                            <div class="bloc-competence">
+                            <label for="comp2" class="carte-competence">Conduire un projet</label>
+                            <div class="contenu-competence">
+                                <label for="comp2" class="fermer-competence"></label>
+                                <p>Détails de la compétence 2 ici...</p>
+                            </div>
+                            </div>
+
+                            <div class="bloc-competence">
+                            <label for="comp3" class="carte-competence">Gérer des données de l'information</label>
+                            <div class="contenu-competence">
+                                <label for="comp3" class="fermer-competence"></label>
+                                <p>Détails de la compétence 3 ici...</p>
+                            </div>
+                            </div>
+
+                            <div class="bloc-competence">
+                            <label for="comp4" class="carte-competence">Optimiser des applications informatiques</label>
+                            <div class="contenu-competence">
+                                <label for="comp4" class="fermer-competence"></label>
+                                <p>Détails de la compétence 4 ici...</p>
+                            </div>
+                            </div>
+
+                            <div class="bloc-competence">
+                            <label for="comp5" class="carte-competence">Réaliser un développement d'application</label>
+                            <div class="contenu-competence">
+                                <label for="comp5" class="fermer-competence"></label>
+                                <p>Détails de la compétence 5 ici...</p>
+                            </div>
+                            </div>
+
+                            <div class="bloc-competence">
+                            <label for="comp6" class="carte-competence">Travailler dans une équipe informatique</label>
+                            <div class="contenu-competence">
+                                <label for="comp6" class="fermer-competence"></label>
+                                <p>Détails de la compétence 6 ici...</p>
+                            </div>
+                            </div>
+
                         </div>
                     </section>
                     
