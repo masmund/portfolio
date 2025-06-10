@@ -163,21 +163,6 @@ nav>p{
     border: 2px solid white;
 }
 
-.marquee {
-    overflow: hidden;
-    white-space: nowrap;
-    animation: defilement 10s linear infinite;
-}
-
-.marquee img {
-    display: inline-block;
-    margin-right: 10px;
-}
-
-@keyframes defilement {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
-}
 
 #competences {
     margin: 10px;
@@ -396,31 +381,4 @@ nav>p{
   transition: background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.slider-section {
-    width: 300px; /* largeur de la zone de défilement */
-    height: 150px; /* hauteur des images */
-    overflow: hidden;
-    border: 3px inset #0cff00;
-    margin: 10px auto;
-    position: relative;
-    background-color: rgba(255, 255, 255, 0.05);
-}
 
-.slider-track {
-    display: flex;
-    width: calc(300px * 8); /* 4 images + 4 copies pour l'infini */
-    animation: scroll 20s linear infinite;
-}
-
-.slider-img {
-    width: 300px;
-    height: 150px;
-    object-fit: cover;
-    flex-shrink: 0;
-}
-
-/* Animation de défilement */
-@keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-1200px); } /* 300px * 4 images = largeur totale à défiler */
-}
