@@ -4,6 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
         <title>Mon portfolio</title>
     </head>
 
@@ -13,6 +15,7 @@
                 <h1 class="titre-superpose">
                     Ji-O KIM
                     <img src="images/b-duckdet.gif" alt="Canard" class="gif-superpose">
+                    <img src="images/flammeVert.gif" alt="flamme" class="gif-corner-left">
                 </h1>
             </header>
 
@@ -33,11 +36,11 @@
                             <img src="images/linee.gif" class="separateur-menu">
                         </div>
                         <ul>
-                            <li><a href="index.html">Accueil</a></li>
-                            <li><a href="#apropos">À propos</a></li>
-                            <li><a href="#projets">Projets</a></li>
-                            <li><a href="#competences">Compétences</a></li>
-                            <li><a href="#contacts">Contacts</a></li>
+                            <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+                            <li><a href="#apropos"><i class="fas fa-user"></i> À propos</a></li>
+                            <li><a href="#projets"><i class="fas fa-code"></i> Projets</a></li>
+                            <li><a href="#competences"><i class="fas fa-laptop-code"></i> Compétences</a></li>
+                            <li><a href="#contacts"><i class="fas fa-envelope"></i> Contacts</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -49,7 +52,8 @@
                         <div class="contenu-apropos">
                             <img src="images/20240803_232403y.jpg" height="150px" width="150px" alt="Photo de profil">
                             <p>
-                                Bonjour ! Je suis Ji-O KIM, étudiant en 1ère année de BUT Informatique à l'IUT de Lannion.
+                                <i class="fas fa-user-astronaut"></i>
+                                Bonjour ! Je suis Ji-O KIM, étudiant en 1ère année de BUT Informatique à l'IUT de Lannion. Je recherche une alternance dans le développement logiciel ! 
                             </p>
                         </div>
                     </section>
@@ -57,7 +61,9 @@
                     <section id="projets">
                     <h2>Mes projets</h2>
 
-                    <div class="grille-projets-toggle">
+                    <p>A venir !</p>
+
+                    <!--<div class="grille-projets-toggle">
                         <input type="checkbox" id="proj1" hidden>
                         <input type="checkbox" id="proj2" hidden>
                         <input type="checkbox" id="proj3" hidden>
@@ -85,7 +91,7 @@
                             <p>Détails du projet 3 ici...</p>
                         </div>
                         </div>
-                    </div>
+                    </div>  -->
                     </section>
 
                     <section id="competences">
@@ -122,10 +128,24 @@
                                     des pays et la génération d'un tableau de médailles.<br>
 
                                     <br>
-                                    <strong>A - Action : </strong> ... <br>
+                                    <strong>A - Action : </strong> 
+                                    <ul>
+                                        <li>Analyser des fichiers et rédiger un rapport sur la compatibilité du site Web</li>
+                                        <li>Convertir et automatiser des fichiers dans des formats exploitables (textes, images, csv)</li>
+                                        <li>Télécharger automatiquement les drapeaux des pays, selon les données du tableau des médailles</li>
+                                        <li>Générer un PDF qui génère les médailles de chaque pays, classement et statistiques</li>
+                                        <li>Utiliser des conteneurs docker pour exécuter des programmes sans à avoir utilser des programmes</li>
+                                    </ul>
 
                                     <br>
-                                    <strong>R - Résultat : </strong> ... <br>
+                                    <strong>R - Résultat : </strong> 
+                                    <ul>
+                                        <li>Mise en place d'une chaine de traitement efficace et réutilisable</li>
+                                        <li>Création de livrable, incluant des rapports: d'analyse, de fichiers convertis, de scrips de traitement
+                                            et un PDF du tableau avec les médailles</li>
+                                        <li>Une documentation complète, décrivant chaque étape du projet</li>
+                                        <li>Une automatisation rapide et efficace, réduisant les erreurs possibles par un Homme</li>
+                                    </ul>
 
                                 </p>
                             </div>
@@ -136,18 +156,43 @@
                             <div class="contenu-competence">
                                 <label for="comp2" class="fermer-competence"></label>
                                 <h3>Recueil des besoins</h3>
+                                <img src="images/J-O.png" alt="JO" width="525px" height="700px">
                                 <p>
 
-                                    <strong>S -  Situation : </strong> ... <br>
+                                    <strong>S -  Situation : </strong> Notre équipe doit réalisatier un site web destiné au Jeux-Olympiques 2024 qui se déroule à Paris
+                                    L'étape du recueil du besoin étant déjà faites, nous devons réaliser le maquettage du site, son arborescence, sa structure,
+                                    son érgonomie, le codage en HTML et CSS. Mais le site doit être également adapté aux téléphones.<br>
 
                                     <br>
-                                    <strong>T - Tâche : </strong> ... <br>
+                                    <strong>T - Tâche : </strong> Concevoir une plateforme numérique destinée à partager des informations 
+                                    sur les disciplines sportives, les épreuves, les athlètes et les valeurs de l'olympisme. 
+                                    Le site doit assurer une accessibilité mondiale, valoriser la pratique sportive et offrir une expérience optimale 
+                                    sur tous les supports, qu'ils soient ordinateurs, tablettes ou smartphones.  <br>
 
                                     <br>
-                                    <strong>A - Action : </strong> ... <br>
+                                    <strong>A - Action : </strong> 
+                                    <ul>
+                                        <li>Recueil des besoins et définition de l’arborescence du site pour assurer une navigation claire et efficace.</li>
+                                        <li>Sélection des contenus pertinents et création d’une charte graphique cohérente avec l’identité visuelle des Jeux Olympiques Paris 2024.</li>
+                                        <li>Conception des maquettes et développement des principales fonctionnalités, incluant :<ul>
+                                            <li>Une page d’accueil présentant des informations générales et le classement des médailles en temps réel.</li>
+                                            <li>Des pages spécifiques dédiées aux disciplines sportives, aux épreuves et aux athlètes.</li>
+                                            <li>Un espace pour le suivi des records olympiques et la diffusion des actualités.</li>
+                                        </ul>
+                                        </li>
+                                        <li>Mise en place d’une accessibilité renforcée, notamment pour un public international et les personnes malvoyantes.</li>
+                                        <li>Réalisation de l’intégration technique et ajout d’un système de suivi statistique des visites du site.</li>
+                                    </ul>
 
                                     <br>
-                                    <strong>R - Résultat : </strong> ... <br>
+                                    <strong>R - Résultat : </strong> 
+                                    <ul>
+                                        <li>Stimuler l’engouement populaire et renforcer l’adhésion aux Jeux Olympiques et Paralympique.</li>
+                                        <li>Faciliter l’accès au sport en créant des passerelles entre les utilisateurs et les fédérations sportives.</li>
+                                        <li>Promouvoir l’image de la France à l’international, tant sur le plan sportif que culturel.</li>
+                                        <li>Inspirer le public grâce à la mise en valeur des portraits d’athlètes et de leurs performances remarquables.</li>
+                                        <li>Assurer une visibilité maximale auprès d’un large public, quel que soit le support de consultation.</li>
+                                    </ul>
 
                                 </p>
                             </div>
@@ -158,18 +203,37 @@
                             <div class="contenu-competence">
                                 <label for="comp3" class="fermer-competence"></label>
                                 <h3>Création de base de données</h3>
+                                <img src="images/bdd.png" alt="bdd" width="525px" height="300px">
                                 <p>
 
-                                    <strong>S -  Situation : </strong> ... <br>
+                                    <strong>S -  Situation : </strong> Dans le cadre d’un projet universitaire en Bases de Données, l’objectif est 
+                                    de concevoir et implémenter une base de données permettant 
+                                    de gérer les résultats des championnats de football, à partir d’un diagramme UML fourni <br>
 
                                     <br>
-                                    <strong>T - Tâche : </strong> ... <br>
+                                    <strong>T - Tâche : </strong> Transformer un diagramme UML en modèle relationnel, en utilisant Tutorial D, et produire :
+                                    <ul>
+                                        <li>Un fichier .rel permettant la création et la réinitialisation de la base de données.</li>
+                                        <li>Un graphe des contraintes d’intégrité référentielles.</li>
+                                    </ul>
 
                                     <br>
-                                    <strong>A - Action : </strong> ... <br>
+                                    <strong>A - Action : </strong> 
+                                    <ul>
+                                        <li>Développement d’un fichier Tutorial D auto-exécutable assurant la création complète de la base.</li>
+                                        <li>Élaboration d’un script SQL structurant les données et facilitant leur manipulation.</li>
+                                        <li>Conception d’un graphe des contraintes d’intégrité avec un outil de modélisation adapté.</li>
+                                        <li>Traduction des objets UML en relations SQL et mise en place des règles d’intégrité référentielles.</li>
+                                    </ul>
 
                                     <br>
-                                    <strong>R - Résultat : </strong> ... <br>
+                                    <strong>R - Résultat : </strong> 
+                                    <ul>
+                                        <li>Obtention d’une base de données fonctionnelle, prête à l’emploi et respectant les spécifications.</li>
+                                        <li>Production d’un graphe des contraintes détaillé illustrant les dépendances entre les entités.</li>
+                                        <li>Fourniture de livrables conformes aux attentes et exploitables dans un cadre pédagogique.</li>
+                                        <li>Consolidation des compétences en modélisation relationnelle et en gestion des bases de données.</li>
+                                    </ul>
 
                                 </p>
                             </div>
@@ -182,60 +246,128 @@
                                 <h3>Snake automatisé</h3>
                                 <p>
 
-                                    <strong>S -  Situation : </strong> ... <br>
+                                    <strong>S -  Situation : </strong> 
+                                    Suite du projet réalisé dans au début de BUT1 Informatique à Lannion.  L’objectif est de concevoir un programme autonome en langage C permettant à un serpent de se déplacer de manière optimisée pour 
+                                    collecter des pommes, tout en comparant différentes approches algorithmiques.
+                                    <br>
+                                    <strong>T - Tâche : </strong> Développer un programme en C assurant le déplacement autonome du serpent, en intégrant :
+                                    <ul>
+                                        <li>La gestion des obstacles.</li>
+                                        <li>Des règles de déplacement spécifiques.</li>
+                                        <li>Une optimisation des parcours pour collecter les pommes avec une efficacité maximale.</li>
+                                    </ul>
 
                                     <br>
-                                    <strong>T - Tâche : </strong> ... <br>
+                                    <strong>A - Action : </strong> 
+                                    <ul>
+                                        <li>Programmation en langage C avec application d’algorithmes de déplacement et de stratégies d’optimisation.</li>
+                                        <li>Adaptation progressive du code pour gérer des contraintes évolutives : introduction d’obstacles, règles de mouvement spécifiques, gestion des interactions entre les éléments du plateau.</li>
+                                        <li>Développement de stratégies de prise de décision autonomes pour le serpent, visant à améliorer son efficacité de parcours.</li>
+                                        <li>Conception de procédures dédiées à la gestion du plateau et des éléments interactifs.</li>
+                                        <li>Respect des conventions de codage et élaboration d’un cahier de tests pour valider les performances et la robustesse du programme.</li>
+                                    </ul>
 
                                     <br>
-                                    <strong>A - Action : </strong> ... <br>
-
-                                    <br>
-                                    <strong>R - Résultat : </strong> ... <br>
+                                    <strong>R - Résultat : </strong> 
+                                    <ul>
+                                        <li>Production d’un programme fonctionnel capable de gérer le déplacement autonome du serpent dans des environnements contraints.</li>
+                                        <li>Mesure des performances en termes de nombre de déplacements, temps CPU et efficacité de collecte des pommes.</li>
+                                        <li>Consolidation des compétences en algorithmes de parcours, en gestion des obstacles et en traitement des interactions entre objets.</li>
+                                        <li>Livraison d’un code source structuré, commenté et conforme aux bonnes pratiques de développement.</li>
+                                    </ul>
 
                                 </p>
                             </div>
                             </div>
 
+                            <div class="gif-flottant">
+                                <img src="images/stars3.gif" alt="GIF déco">
+                            </div>
+
                             <div class="bloc-competence">
-                            <label for="comp5" class="carte-competence">Réaliser un développement d'application</label>
+                            <label for="comp5" class="carte-competence">Travailler dans une équipe informatique</label>
                             <div class="contenu-competence">
                                 <label for="comp5" class="fermer-competence"></label>
-                                <h3>Snake</h3>
+                                <h3>Envrionnement Economique</h3>
+                                <img src="images/economie.png" alt="economie" width="525px" height="300px">
                                 <p>
 
-                                    <strong>S -  Situation : </strong> ... <br>
+                                    <strong>S -  Situation : </strong> 
+                                    Projet universitaire visant à réaliser une présentation (diaporama) et un rapport sur une entreprise 
+                                    française reconnue. L’étude porte ici sur Danone et met 
+                                    l’accent sur l’importance de la communication et de l’organisation au sein de l’équipe projet. <br>
 
                                     <br>
-                                    <strong>T - Tâche : </strong> ... <br>
+                                    <strong>T - Tâche : </strong> 
+                                    Concevoir un diaporama efficace et un rapport structuré, intégrant une analyse approfondie de l’entreprise :
+                                    <ul>
+                                        <li>Historique, organisation interne, actions de Responsabilité Sociétale des Entreprises (RSE).</li>
+                                        <li>Évaluation de l’engagement de l’entreprise et vérification de la conformité aux consignes pédagogiques.</li>
+                                    </ul>
 
                                     <br>
-                                    <strong>A - Action : </strong> ... <br>
+                                    <strong>A - Action : </strong> 
+                                    <ul>
+                                        <li>Recherche documentaire approfondie : exploitation du rapport annuel, consultation de la charte RSE, recherches en bibliothèque universitaire, analyses SWOT et PORTER.</li>
+                                        <li>Organisation et collaboration structurées : répartition des tâches entre les membres, planification des réunions, utilisation d’outils collaboratifs en ligne.</li>
+                                        <li>Analyse et synthèse des données : entretiens pour identifier les forces et faiblesses, veille stratégique continue, application de la méthode AGILE pour une gestion souple du projet.</li>
+                                        <li>Production des livrables : création d’un diaporama structuré présentant l’entreprise, ses engagements RSE, son historique et la méthodologie employée ; rédaction d’un rapport concis, clair et orienté analyse.</li>
+                                    </ul>
 
                                     <br>
-                                    <strong>R - Résultat : </strong> ... <br>
+                                    <strong>R - Résultat : </strong> 
+                                    <ul>
+                                        <li>Production d’un diaporama clair et structuré, répondant aux attentes.</li>
+                                        <li>Réalisation d’un rapport précis et analytique, intégrant des éléments stratégiques pertinents.</li>
+                                        <li>Évaluation détaillée des engagements RSE d’Engie et vérification du respect des consignes du projet.</li>
+                                        <li>Meilleure compréhension de l’organisation interne d’Engie grâce aux outils d’analyse stratégique comme SWOT et PORTER.</li>
+                                        <li>Mise en œuvre efficace de méthodes de gestion de projet, telles que AGILE et veille stratégique.</li>
+                                    </ul>
 
                                 </p>
                             </div>
                             </div>
 
                             <div class="bloc-competence">
-                            <label for="comp6" class="carte-competence">Travailler dans une équipe informatique</label>
+                            <label for="comp6" class="carte-competence">Réaliser un développement d'application</label>
                             <div class="contenu-competence">
                                 <label for="comp6" class="fermer-competence"></label>
-                                <h3>Environnement économique</h3>
+                                <h3>Snake</h3>
+                                <img src="images/snake.png" alt="snake" width="525px" height="300px">
                                 <p>
 
-                                    <strong>S -  Situation : </strong> ... <br>
+                                    <strong>S -  Situation : </strong> 
+                                    Projet réalisé dans au début de BUT1 Informatique à Lannion. 
+                                    L’objectif est de concevoir et de développer une version fonctionnelle et évolutive du jeu Snake en langage C. <br>
 
                                     <br>
-                                    <strong>T - Tâche : </strong> ... <br>
+                                    <strong>T - Tâche : </strong> 
+                                    Développer le jeu Snake en intégrant les fonctionnalités essentielles et avancées, notamment :
+                                    <ul>
+                                        <li>Le déplacement fluide du serpent.</li>
+                                        <li>La gestion des entrées utilisateur.</li>
+                                        <li>L’ajout de mécaniques de jeu évolutives.</li>
+                                        <li>La détection des collisions.</li>
+                                    </ul> 
 
                                     <br>
-                                    <strong>A - Action : </strong> ... <br>
+                                    <strong>A - Action : </strong> 
+                                    <ul>
+                                        <li>Programmation en langage C en utilisant des tableaux, des fonctions, des procédures et des structures de données adaptées.</li>
+                                        <li>Application rigoureuse des conventions de codage et intégration d’algorithmes spécifiques pour le déplacement et la gestion des collisions.</li>
+                                        <li>Conception progressive et modulaire du code afin de faciliter l’ajout de nouvelles fonctionnalités.</li>
+                                        <li>Élaboration d’un cahier de tests pour valider le bon fonctionnement des différentes composantes du jeu.</li>
+                                    </ul>
 
                                     <br>
-                                    <strong>R - Résultat : </strong> ... <br>
+                                    <strong>R - Résultat : </strong> 
+                                    <ul>
+                                        <li>Acquisition des fondamentaux de la programmation en C.</li>
+                                        <li>Application concrète des principes de la programmation structurée.</li>
+                                        <li>Maîtrise des interactions utilisateur et gestion des contraintes liées à l’affichage en mode terminal.</li>
+                                        <li>Développement d’algorithmes de déplacement et de détection des collisions efficaces dans un code lisible et structuré.</li>
+                                        <li>Suivi d’un cahier des charges rigoureux et validation progressive du projet par des phases de test.</li>
+                                    </ul>
 
                                 </p>
                             </div>
@@ -257,6 +389,7 @@
                             <div class="contact-item">
                             <span>📧</span>
                             <a href="mailto:jiokim098@gmail.com">jiokim098@gmail.com</a>
+                            <img src="images/mail.gif" alt="email gif" height="20">
                             </div>
 
                             <div class="contact-item">
@@ -280,9 +413,12 @@
             </main>
 
             <footer>
-                <p> &copy; 2025 Tous droits réservés </p>
+                
+                <p>  <i class="fas fa-terminal"></i> &copy; 2025 Tous droits réservés</p>
             </footer>
         </div>
     </body>
+    <img src="images/astronaut.gif" class="coin-top-left" alt="coin gif">
+    <img src="images/skull.gif" class="coin-bottom-right" alt="coin gif">
 
 </html>

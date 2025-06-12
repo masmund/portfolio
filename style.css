@@ -4,7 +4,24 @@ body{
     background-image: url("images/bluestarback.gif");
     background-repeat: repeat;
     color: white;
-}   
+} 
+
+h1, h2, .tab {
+    font-family: 'Press Start 2P', cursive;
+}
+
+#topBar marquee img {
+    height: 40px; /* ou la hauteur que tu veux */
+    width: auto;
+    vertical-align: middle;
+}
+
+.gif-corner-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+}
 
 
 h1 {
@@ -22,6 +39,38 @@ h1 {
     width: 90%;
     margin: 0 auto;
     padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5)
+}
+
+.coin-top-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 150px;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.gif-flottant {
+    position: absolute;
+    top: 540px;  /* ajuste selon ton besoin */
+    left: 73%;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.gif-flottant img {
+    width: 80px;  /* ou selon ton image */
+}
+
+.coin-bottom-right {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    z-index: 100;
+    pointer-events: none;
+    margin: 1em 1em;
 }
 
 .titre-superpose {
@@ -35,6 +84,7 @@ h1 {
     align-items: center;
     overflow: hidden; /* empêche le gif de déborder */
 }
+
 
 .gif-superpose {
     position: absolute;
@@ -335,6 +385,12 @@ nav>p{
   padding: 10px 15px;
   color: white;
   font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+input:checked ~ .bloc-competence .contenu-competence {
+    opacity: 1;
 }
 
 .fermer-competence {
