@@ -73,6 +73,19 @@ h1 {
     margin: 1em 1em;
 }
 
+a:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+a:visited{
+  color:white;
+}
+
+a{
+  text-decoration: underline;
+}
+
 .titre-superpose {
     position: relative;
     text-align: center;
