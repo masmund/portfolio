@@ -1,3 +1,100 @@
-<html>
-  coucou
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Ji-O | Portfolio</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+
+    <!--Polices-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Librairie Phosphor Icons SVG-->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!--Logo des langages-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+  </head>
+  <body id="top">
+    <!--Navbar-->
+    <nav>
+      <div class="nav-links">
+        <a href="#home" class="nav-link active">Accueil</a>
+        <a href="#about" class="nav-link">À propos</a>
+        <a href="#skills" class="nav-link">Compétences</a>
+        <a href="#projects" class="nav-link">Projets</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <div class="theme-toggle" id="themeToggle" title="Changer le thème">
+          <i class="ph ph-moon"></i>
+        </div>
+      </div>
+    </nav>
+
+    <header id="home" class="hero">
+      <canvas id="bgCanvas"></canvas>
+      <div class="hero-content container reveal">
+        <span class="subtitle">Portfolio</span>
+        <h1>Développeur Informatique</h1>
+        <p>Étudiant à l'IUT de Lannion en 2eme année de BUT Informatique</p>
+      </div>
+      <div>
+        <a href="#projects" class="btn">Voir mes projets</a>
+      </div>
+    </header>
+
+    <section id="about">
+      <div class="container reveal">
+        <span class="subtitle">À propos</span>
+        <h2>Mon profil</h2>
+        <div class="about-grid">
+          <div class="profile-img-container">
+            <img src="images/" alt="Ma photo" class="profile-img" />
+          </div>
+          <div>
+            <p>
+              Salut ! Je suis Ji-O. Passioné par l'informatique, j'ai choisis le
+              BUT Informatique pour m'améliorer dans ce domaine passionant !
+            </p>
+            <p>
+              J'aime comprendre comment les choses fonctionnent derrière
+              l'affichage, mais aussi le développement web, d'application, et
+              l'optimisation des bases de données !
+            </p>
+            <div>
+              <ul>
+                <li><strong> Formation :</strong> 2ème année BUT Info</li>
+                <li><strong> Lieu :</strong> IUT de Lannion</li>
+                <li><strong> Disponibilité :</strong> Stage dès Avril 2026</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container reveal">
+        <span class="subtitle">Savoir-Faire</span>
+        <h2>Mes compétences</h2>
+
+        <div class="skills-grid">
+          <div class="skill-category">
+            <div class="skill-title">
+              <i class="ph ph-database"></i> Base de données
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
