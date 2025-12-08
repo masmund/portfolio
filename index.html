@@ -60,7 +60,7 @@
         <h2>Mon profil</h2>
         <div class="about-grid">
           <div class="profile-img-container">
-            <img src="images/" alt="Ma photo" class="profile-img" />
+            <img src="images/placeholder.png" alt="Ma photo" class="profile-img" />
           </div>
           <div>
             <p>
@@ -182,5 +182,42 @@
         </div>
       </div>
     </section>
+
+    <!--Section projets-->
+    <section id="projects">
+        <div class="container reveal">
+            <span class="subtitle">Portfolio</span>
+            <h2>Projets académiques / personnels</h2>
+
+            <!--Boutons des catégories de projets (web, app...)-->
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="Web">Web</button>
+                <button class="filter-btn" data-filter="App">Application</button>
+                <button class="filter-btn" data-filter="Sys">Système</button>
+            </div>
+
+            <div class="projects-grid">
+                <!--Projet 1-->
+                <div class="project-card" data-cat="Web" onclick="openModal(0)">
+                    <div class="card-image-wrapper">
+                        <img src="images/placeholder.png" class="card-image" alt="Web" />
+                    </div>
+                    <div class="card-content">
+                        <div class="tags">
+                            <span class="tag">Web</span>
+                            <span class="tag">...</span>
+                        </div>
+                        <h3>Site Jeux Olympiques 2025</h3>
+                        <p>Recueil des besoins.</p>
+                    </div>
+                </div>
+
+                <!--Projet 2-->
+
+            </div>
+        </div>
+    </section>
+
   </body>
 </html>
