@@ -1,3 +1,4 @@
+//variable pour le light mode
 :root {
   --bg: #f4f7f5;
   --bg-card: #ffffff;
@@ -5,13 +6,14 @@
   --text-muted: #5c7a72;
   --primary: #2d6a4f;
   --accent: #95d5b2;
-  --border-color: rgba(45, 106, 79, 0.25);
+  --border-color: rgba(45, 106, 79, 0.15);
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   --nav-bg: rgba(255, 255, 255, 0.85);
   --dot-color: rgba(45, 106, 79, 0.4);
   --line-color: rgba(45, 106, 79, 0.15);
 }
 
+//variables pour le dark mode
 body.dark-mode {
   --bg: #0b1a15;
   --bg-card: #132923;
@@ -26,6 +28,7 @@ body.dark-mode {
   --line-color: rgba(74, 214, 160, 0.2);
 }
 
+// changement selon dark mode ou light mode en scss
 $bg: var(--bg);
 $bg-card: var(--bg-card);
 $text: var(--text);

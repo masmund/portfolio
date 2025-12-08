@@ -77,3 +77,13 @@ nav {
     animation: bounce 0.5s ease;
   }
 }
+
+#bgCanvas {
+  position: absolute; /* Permet de le placer par-dessus ou dessous les autres éléments */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Couvre 100% de la section <header> parente */
+  z-index: 0; /* Place-le sous le texte de bienvenue (qui est z-index: 3) */
+  pointer-events: none; /* Important : permet de cliquer sur les boutons et liens situés au-dessus */
+}

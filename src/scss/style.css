@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --bg: #f4f7f5;
   --bg-card: #ffffff;
@@ -5,7 +6,7 @@
   --text-muted: #5c7a72;
   --primary: #2d6a4f;
   --accent: #95d5b2;
-  --border-color: rgba(45, 106, 79, 0.25);
+  --border-color: rgba(45, 106, 79, 0.15);
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   --nav-bg: rgba(255, 255, 255, 0.85);
   --dot-color: rgba(45, 106, 79, 0.4);
@@ -98,4 +99,14 @@ nav a.active {
 }
 nav a:hover {
   animation: bounce 0.5s ease;
+}
+
+#bgCanvas {
+  position: absolute; /* Permet de le placer par-dessus ou dessous les autres éléments */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Couvre 100% de la section <header> parente */
+  z-index: 0; /* Place-le sous le texte de bienvenue (qui est z-index: 3) */
+  pointer-events: none; /* Important : permet de cliquer sur les boutons et liens situés au-dessus */
 }/*# sourceMappingURL=style.css.map */
