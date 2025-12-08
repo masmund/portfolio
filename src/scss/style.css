@@ -1,0 +1,101 @@
+:root {
+  --bg: #f4f7f5;
+  --bg-card: #ffffff;
+  --text: #1a3c34;
+  --text-muted: #5c7a72;
+  --primary: #2d6a4f;
+  --accent: #95d5b2;
+  --border-color: rgba(45, 106, 79, 0.25);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  --nav-bg: rgba(255, 255, 255, 0.85);
+  --dot-color: rgba(45, 106, 79, 0.4);
+  --line-color: rgba(45, 106, 79, 0.15);
+}
+
+body.dark-mode {
+  --bg: #0b1a15;
+  --bg-card: #132923;
+  --text: #e8f5f1;
+  --text-muted: #a0c4b8;
+  --primary: #4ad6a0;
+  --accent: #2d6a4f;
+  --border-color: rgba(74, 214, 160, 0.2);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  --nav-bg: rgba(19, 41, 35, 0.85);
+  --dot-color: rgba(74, 214, 160, 0.5);
+  --line-color: rgba(74, 214, 160, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  overflow-x: hidden;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--nav-bg);
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+  padding: 8px 15px;
+  border-radius: 50px;
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  z-index: 100;
+  box-shadow: var(--shadow);
+  transition: 0.3s;
+  /*Animation rebondissement sur la navbar*/
+}
+nav .nav-links {
+  gap: 5px;
+}
+nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 30px;
+  transition: color 0.3s, background 0.3s;
+  display: inline-block;
+}
+nav a:hover,
+nav a.active {
+  color: var(--primary);
+  background: var(--border-color);
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-4px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  70% {
+    transform: translateY(-2px);
+  }
+}
+nav a:hover {
+  animation: bounce 0.5s ease;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,79 @@
+@use "variables" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $bg;
+  color: $text;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  overflow-x: hidden;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: $nav-bg;
+  backdrop-filter: blur(12px);
+  padding: 8px 15px;
+  border-radius: 50px;
+  border: 1px solid $border-color;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  z-index: 100;
+  box-shadow: $shadow;
+  transition: 0.3s;
+
+  .nav-links {
+    gap: 5px;
+  }
+
+  a {
+    text-decoration: none;
+    color: $text;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 30px;
+    transition: color 0.3s, background 0.3s;
+    display: inline-block;
+  }
+
+  a:hover,
+  a.active {
+    color: $primary;
+    background: $border-color;
+  }
+
+  /*Animation rebondissement sur la navbar*/
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    30% {
+      transform: translateY(-4px);
+    }
+    50% {
+      transform: translateY(0);
+    }
+    70% {
+      transform: translateY(-2px);
+    }
+  }
+  a:hover {
+    animation: bounce 0.5s ease;
+  }
+}

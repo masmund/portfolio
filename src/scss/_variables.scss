@@ -1,0 +1,37 @@
+:root {
+  --bg: #f4f7f5;
+  --bg-card: #ffffff;
+  --text: #1a3c34;
+  --text-muted: #5c7a72;
+  --primary: #2d6a4f;
+  --accent: #95d5b2;
+  --border-color: rgba(45, 106, 79, 0.25);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  --nav-bg: rgba(255, 255, 255, 0.85);
+  --dot-color: rgba(45, 106, 79, 0.4);
+  --line-color: rgba(45, 106, 79, 0.15);
+}
+
+body.dark-mode {
+  --bg: #0b1a15;
+  --bg-card: #132923;
+  --text: #e8f5f1;
+  --text-muted: #a0c4b8;
+  --primary: #4ad6a0;
+  --accent: #2d6a4f;
+  --border-color: rgba(74, 214, 160, 0.2);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  --nav-bg: rgba(19, 41, 35, 0.85);
+  --dot-color: rgba(74, 214, 160, 0.5);
+  --line-color: rgba(74, 214, 160, 0.2);
+}
+
+$bg: var(--bg);
+$bg-card: var(--bg-card);
+$text: var(--text);
+$text-muted: var(--text-muted);
+$primary: var(--primary);
+$nav-bg: var(--nav-bg);
+$accent: var(--accent);
+$border-color: var(--border-color);
+$shadow: var(--shadow);
