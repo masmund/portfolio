@@ -5,7 +5,7 @@
     <title>Ji-O | Portfolio</title>
 
     <link rel="stylesheet" href="src/scss/style.css" />
-    <script src="src/script/script.js"></script>
+    <script src="src/script/script.js" defer></script>
 
     <!--Polices-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -195,6 +195,7 @@
                 <button class="filter-btn" data-filter="Web">Web</button>
                 <button class="filter-btn" data-filter="App">Application</button>
                 <button class="filter-btn" data-filter="Sys">Système</button>
+                <button class="filter-btn" data-filter="DB">Base de Données</button>
             </div>
 
             <div class="projects-grid">
@@ -214,6 +215,18 @@
                 </div>
 
                 <!--Projet 2-->
+                <div class="project-card" data-cat="App" onclick="openModal(1)">
+                    <div class="card-image-wrapper">
+                        <img src="src/images/placeholder.png" class="card-image" alt="Web" />
+                    </div>
+                    <div class="card-content">
+                        <div class="tags">
+                            <span class="tag">caca</span>
+                            <span class="tag">caca</span>
+                        </div>
+                        <h3>caca</h3>
+                        <p>Recueil des besoins.</p>
+                    </div>
 
             </div>
         </div>
@@ -221,6 +234,7 @@
 
     <!--section contact (informations)-->
     <section id="contact">
+    <div id="contact">
       <div class="container reveal">
         <span class="subtitle">Contact</span>
         <h2>Me contacter</h2>
@@ -249,7 +263,6 @@
                 <div class="info-text">06 52 00 67 67</div>
               </div>
             </div>
-          </div>
 
           <!--Location-->
           <div class="info-item">
@@ -278,8 +291,57 @@
             <a href="#" class="social-btn"><i class="ph ph-github-logo"></i> </a>
           </div>
         </div>
+      
+      <!--Formulaire envoi email-->
+      <form id="contactForm" onsubmit="handleFormSubmit(event)">
+        <div class="form-group">
+          <label class="form-label">Nom complet</label>
+          <input type="text" class="form-input" required/>
+        </div>
+        
+        <div class="form-group">
+          <label class="form-group">Adresse email</label>
+          <input type="text" class="form-input" required/>
+        </div>
+
+        <div class="form-group">
+          <label class="form-group">Message</label>
+          <textarea class="form-textarea" placeholder="Votre message..." required></textarea>
+        </div>
+        
+        <button type="submit" class="btn">Envoyer le message</button>
+
+        <div id="formSucess" class="form-success">
+          <i class="ph ph-check-circle"></i> Message envoyé !
+        </div>
+      </form>
       </div>
+    </div>
+    <p>&copy; 2025 Ji-O. Portfolio</p>
     </section>
+
+    <!--Cadre projets-->
+    <div class="modal-overlay" id="modal">
+      <div class="modal-content">
+        <div class="close-modal-btn" onclick="closeModal()">x</div>
+          <img src="src/images/placeholder.png" id="m-img" class="modal-header-img" alt="Projet" onclick="openLightbox(this.src)" title="Cliquez pour agraindir"/>
+        <div class="modal-body">
+          <h2 id="m-title">Titre</h2>
+          <span id="m-cat">Catégorie</span>
+          <div>
+            <h3>Contexte</h3>
+            <p id="m-desc">Description...</p>
+            <h3>Stack technique</h3>
+            <div id="m-tech" class="tags"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--image du projet-->
+    <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
+      <img src="src/images/placeholder.png" id="lightbox-img" class="lightbox-img"/>
+    </div>
 
   </body>
 </html>

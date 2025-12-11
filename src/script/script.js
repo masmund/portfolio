@@ -60,7 +60,7 @@ class Particle {
 
   draw() {
     const style = getComputedStyle(document.body);
-    ctx.fillStyle = style.getPropertyValue("--dot-color--").trim();
+    ctx.fillStyle = style.getPropertyValue("--dot-color").trim();
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
     ctx.fill();
@@ -110,3 +110,128 @@ function animate() {
 window.addEventListener("resize", resize);
 resize();
 animate();
+
+//darkmode
+const themeToggle = document.getElementById("themeToggle");
+const themeIcon = themeToggle.querySelector("i");
+let isDarkmode = false;
+themeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+  isDarkmode = !isDarkmode;
+  themeIcon.classList = isDarkmode ? "ph ph-sun" : "ph ph-moon";
+});
+
+//Filtrage des projets
+const filterBtns = document.querySelectorAll(".filter-btn");
+const projectCards = document.querySelectorAll(".project-card");
+
+filterBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    filterBtns.forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    const filter = btn.getAttribute("data-filter");
+
+    projectCards.forEach((cards) => {
+      if (filter === "all" || cards.getAttribute("data-cat") === filter) {
+        cards.classList.remove("hidden");
+        setTimeout(() => {
+          cards.style.opacity = "1";
+          cards.style.transform = "scale(1)";
+        }, 50);
+      } else {
+        cards.classList.add("hidden");
+        cards.style.opacity = "0";
+        cards.style.transform = "scale(0.9)";
+      }
+    });
+  });
+});
+
+//MODALE ET LIGHTBOX (cadre projet)
+const projects = [
+  //chaque {...} = un projet
+  {
+    title: "Placeholder",
+    cat: "catégorie",
+    img: "../images/placeholder.png",
+    desc: "description",
+    tech: ["Placeholder", "Placeholder", "Placeholder"],
+  },
+
+  {
+    title: "caca",
+    cat: "caca",
+    img: "../images/placeholder.png",
+    desc: "caca",
+    tech: ["caca", "caca", "caca"],
+  },
+];
+
+const modal = document.getElementById("modal");
+const mTitle = document.getElementById("m-title");
+const mCat = document.getElementById("m-cat");
+const mImg = document.getElementById("m-img");
+const mDesc = document.getElementById("m-desc");
+const mTech = document.getElementById("m-tech");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+
+function openModal(index) {
+  const p = projects[index];
+  mTitle.innerText = p.title;
+  mCat.innerText = p.cat;
+  mImg.src = p.img;
+  mDesc.innerText = p.desc;
+  mTech.innerHTML = "";
+  p.tech.forEach((t) => {
+    const span = document.createElement("span");
+    span.className = "tag";
+    span.innerText = t;
+    mTech.appendChild(span);
+  });
+  modal.classList.add("active");
+  document.body.classList.add("no-scroll");
+}
+
+function closeModal() {
+  modal.classList.remove("active");
+  document.body.classList.remove("no-scroll");
+}
+
+function openLightbox(src) {
+  lightboxImg.src = src;
+  lightbox.classList.add("active");
+}
+
+function closeLightbox() {
+  lightbox.classList.remove("active");
+}
+
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) closeModal();
+});
+
+//scroll reveal & navbar
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) entry.target.classList.add("active");
+    });
+  },
+  { threshold: 0.1 }
+);
+document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+const sections = document.querySelectorAll("section, header");
+const navLinks = document.querySelectorAll(".nav-link");
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach((section) => {
+    if (scrollY >= section.offsetTop - 200)
+      current = section.getAttribute("id");
+  });
+  navLinks.forEach((li) => {
+    li.classList.remove("active");
+    if (li.getAttribute("href").includes(current)) li.classList.add("active");
+  });
+});
