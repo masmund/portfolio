@@ -152,11 +152,11 @@ filterBtns.forEach((btn) => {
 const projects = [
   //chaque {...} = un projet
   {
-    title: "Placeholder",
-    cat: "catégorie",
-    img: "../images/placeholder.png",
-    desc: "description",
-    tech: ["Placeholder", "Placeholder", "Placeholder"],
+    title: "Site vitrine J-O 2025",
+    cat: "SAE1.03",
+    img: "src/images/J-O.png",
+    desc: "Création d'un site web vitrine pours les Jeux-Olympique 2025 à Paris, suite à la demande d'un client",
+    tech: ["HTML", "CSS", "JS"],
   },
 
   {
