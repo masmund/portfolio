@@ -152,7 +152,7 @@ filterBtns.forEach((btn) => {
 const projects = [
   //chaque {...} = un projet
   {
-    title: "Site vitrine J-O 2025",
+    title: "Site vitrine Jeux-Olympiques 2025",
     cat: "SAE1.03",
     img: "src/images/J-O.png",
     desc: "Création d'un site web vitrine pours les Jeux-Olympique 2025 à Paris, suite à la demande d'un client",
@@ -219,7 +219,7 @@ const observer = new IntersectionObserver(
       if (entry.isIntersecting) entry.target.classList.add("active");
     });
   },
-  { threshold: 0.1 }
+  { threshold: 0.1 },
 );
 document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 const sections = document.querySelectorAll("section, header");
